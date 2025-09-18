@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default function Favorite() {
+const Favorite = () => {
   return (
     <div>Favorite</div>
   )
 }
+
+export default Favorite
