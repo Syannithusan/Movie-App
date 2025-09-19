@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
-import { MenuIcon, SearchIcon, XIcon } from 'lucide-react'
+import { Link, useNavigate } from 'react-router-dom'
+import { MenuIcon, SearchIcon, Ticket, TicketPlus, XIcon } from 'lucide-react'
 import { assets } from '../assets/assets'
 import { useState } from 'react'
 import { useClerk, UserButton, useUser } from '@clerk/clerk-react'
@@ -9,7 +9,7 @@ const NavBar = () => {
   const { user } = useUser()
   const { openSignIn } = useClerk()
 
-
+const navigate = useNavigate()
 
   return (
     <div className='fixed top-0 left-0 z-50 w-full flex items-center 
@@ -46,7 +46,12 @@ const NavBar = () => {
       Login
     </button>
   ) : (
-    <UserButton />
+    <UserButton>
+      <UserButton.MenuItems>
+        <UserButton.Action label='My booking' labelIcon={<TicketPlus width={15}/>} 
+        onClick={()=> navigate('/my-booking')}  />
+      </UserButton.MenuItems>
+    </UserButton>
   )
 }
 
