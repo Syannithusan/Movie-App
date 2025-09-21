@@ -26,11 +26,11 @@ const navigate = useNavigate()
 
         <XIcon className='md:hidden absolute top-6 right-6 w-6 h-6 cursor-pointer' onClick={() => setIsOpen(!isOpen)} />
 
-        <Link onClick={() => { scrollTo(0, 0), setIsOpen(false) }} to='/'>Home</Link>
-        <Link onClick={() => { scrollTo(0, 0), setIsOpen(false) }} to='Movies'>Movies</Link>
-        <Link onClick={() => { scrollTo(0, 0), setIsOpen(false) }} to='/'>Theates</Link>
-        <Link onClick={() => { scrollTo(0, 0), setIsOpen(false) }} to='/'>Release</Link>
-        <Link onClick={() => { scrollTo(0, 0), setIsOpen(false) }} to='/Favorits'>Favorits</Link>
+        <Link onClick={() => { scrollTo(0, 0); setIsOpen(false) }} to='/'>Home</Link>
+        <Link onClick={() => { scrollTo(1, 0); setIsOpen(false) }} to='Movies'>Movies</Link>
+        <Link onClick={() => { scrollTo(0, 0); setIsOpen(false) }} to='/'>Theates</Link>
+        <Link onClick={() => { scrollTo(0, 0); setIsOpen(false) }} to='/'>Release</Link>
+        <Link onClick={() => { scrollTo(0, 0); setIsOpen(false) }} to='/Favorits'>Favorits</Link>
 
       </div>
 
